@@ -2,9 +2,8 @@ import { useState } from "react";
 
 function ListGroup() {
   let items = ["New York", "San Francisco", "London", "Paris", "Berlin"];
-  let selectedIndex = 0;
+  let selectedIndex = 4;
   //hook
-  useState
   // Event handler Обработчик события
   return (
     <>
