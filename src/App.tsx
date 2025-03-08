@@ -1,24 +1,16 @@
-// import Message from './Message';
-import ListGroup from "./components/ListGroup";
+import Alert from "./components/Alert";
 
 function App() {
-  let items = ["New York", "San Francisco", "London", "Paris", "Berlin"];
-  let items2 = ["Erlan", "Diana", "Ruslan", "Temirlan", "Kanykei"];
-
-
-  const handleSelectItem = (item: string) => console.log(item);
   return (
     <div>
-      <ListGroup
-        items={items}
-        heading="Cities"
-        onSelectItem={handleSelectItem}
-      />
-      <ListGroup
-        items={items2}
-        heading="Names"
-        onSelectItem={handleSelectItem}
-      />
+      <Alert>
+        <h1>Hello World</h1>
+        <p>Lorem ipsum assumenda enim laudantium laboriosam at?</p>
+        <p>My name is Erlan</p>
+        <input type="text" />
+        <br />
+        <button>Submit</button>
+      </Alert>
     </div>
   );
 }
