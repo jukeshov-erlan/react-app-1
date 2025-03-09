@@ -1,11 +1,13 @@
+import { useState } from "react";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
 import ListGroup from "./components/ListGroup";
 
 function App() {
+  const [alertVisible, setAlertVisibility] = useState(false);
   return (
     <div>
-      <Alert>
+      {/* <Alert onClose={setAlertVisibility(false)}>
         <h1>Hello Everybody</h1>
         <p>This is my first react App and it's just a practice</p>
         <p>My name is Erlan and I'm 27 y.o.</p>
@@ -13,8 +15,9 @@ function App() {
         <br />
         <br />
         <button>Submit</button>
-      </Alert>
-      <Button onClick={() => console.log('CLICKED')}>My Button</Button>
+      </Alert> */}
+      { alertVisible && <Alert onClose={() => setAlertVisibility(false)}>My Alert</Alert>}
+      <Button onClick={() => setAlertVisibility(true)}>My Button</Button>
     </div>
   );
 }
